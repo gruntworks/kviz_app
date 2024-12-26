@@ -5,7 +5,7 @@ export const _question = `
     </div>
     <div class="actions">
         <button id="incorrect">✕</button>
-        <button id="pause">⏸</button>
+        <button id="pause">&#x23F8;</button>
         <button id="correct">✓</button>
     </div>
 `

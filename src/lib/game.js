@@ -80,7 +80,8 @@ export function game() {
 
     const togglePause = () => {
         paused = !paused;
-        document.getElementById('pause').innerText = paused ? '⏵' : '⏸';
+        // Set pause or play sign
+        document.getElementById('pause').innerText = paused ? '\u23F5' : '\u23F8';
 
     }
 
@@ -109,7 +110,7 @@ export function game() {
     }
 
     const addRandomQuestion = () => {
-        // First remove previous question
+        // Remove previous question so that we can add new one
         const element = document.getElementById('question-container');
         if (element) {
             element.remove();
