@@ -6,6 +6,7 @@ export function game() {
     let sessionRunning = false;
     let sessionDuration = 0; // Keeping seconds for timer here
     let timerId = null;
+    let paused = false;
     let score = 0;
 
     const start = async (duration) => {
@@ -28,6 +29,9 @@ export function game() {
 
     const startTimer = () => {
         timerId = setInterval(() => {
+            if (paused) {
+                return;
+            }
             if (sessionDuration === 0) {
                 endSession();
                 return;
@@ -61,6 +65,7 @@ export function game() {
     }
 
     const markQuestionAsCorrect = () => {
+        paused = false;
         if (!sessionRunning) return;
         score++;
         addRandomQuestion();
@@ -68,8 +73,15 @@ export function game() {
     }
 
     const markQuestionAsWrong = () => {
+        paused = false;
         if (!sessionRunning) return;
         addRandomQuestion()
+    }
+
+    const togglePause = () => {
+        paused = !paused;
+        document.getElementById('pause').innerText = paused ? '⏵' : '⏸';
+
     }
 
     const addScoreTracker = () => {
@@ -123,8 +135,9 @@ export function game() {
 
         // Add question elements
         document.getElementById('question_text').innerText = randomQuestion.pitanje;
-        document.getElementById('right').onclick = markQuestionAsCorrect;
-        document.getElementById('wrong').onclick = markQuestionAsWrong;
+        document.getElementById('correct').onclick = markQuestionAsCorrect;
+        document.getElementById('incorrect').onclick = markQuestionAsWrong;
+        document.getElementById('pause').onclick = togglePause;
         const choices = document.getElementById('question_choices');
 
         // Add answers

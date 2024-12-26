@@ -4,8 +4,9 @@ export const _question = `
         <div id="question_choices"></div>
     </div>
     <div class="actions">
-        <button class="incorrect" id="wrong">✕</button>
-        <button class="correct" id="right">✓</button>
+        <button id="incorrect">✕</button>
+        <button id="pause">⏸</button>
+        <button id="correct">✓</button>
     </div>
 `
 

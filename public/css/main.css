@@ -119,7 +119,7 @@ body {
     gap: 48px;
 }
 
-.correct, .incorrect {
+#correct, #incorrect, #pause {
     all: unset;
     width: 80px;
     height: 80px;
@@ -131,16 +131,22 @@ body {
     cursor: pointer;
 }
 
-.correct {
+#correct {
     background-color: #47c63a;
     color: #fff;
     border: 2px solid #02ff2c;
 }
 
-.incorrect {
+#incorrect {
     background-color: #ed450c;
     color: #fff;
     border: 2px solid #c70000;
+}
+
+#pause {
+    background-color: #dadada;
+    color: #383838;
+    border: 2px solid #333333;
 }
 
 /*
