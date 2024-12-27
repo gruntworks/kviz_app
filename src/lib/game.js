@@ -1,17 +1,18 @@
 import {_menu, _question} from "./templates.js";
 
 export function game() {
-    let allQuestions = [];
+    let easyQuestions = []
+    let hardQuestions = []
     let usedQuestions = [];
     let sessionRunning = false;
     let sessionDuration = 0; // Keeping seconds for timer here
     let timerId = null;
     let paused = false;
     let score = 0;
+    let mode = 'easy';
 
     const start = async (duration) => {
-        await loadAllQuestions();
-
+        score = 0;
         sessionDuration = duration * 60
         document.body.replaceChildren();
         addBackNavigation();
@@ -47,8 +48,8 @@ export function game() {
         clearTimeout(timerId);
     }
 
-    const loadAllQuestions = () => {
-        fetch('./public/assets/questions2k.json')
+    const loadHarderQuestions = () => {
+        fetch('./public/assets/questions_harder.json')
             .then(response => {
                 if (!response.ok) {
                     throw new Error('Network response was not ok ' + response.statusText);
@@ -56,7 +57,24 @@ export function game() {
                 return response.json();
             })
             .then(data => {
-                allQuestions = data;
+                hardQuestions = data;
+            })
+            .catch(error => {
+                console.error(error);
+            });
+
+    }
+
+    const loadEasierQuestions = () => {
+        fetch('./public/assets/questions_easier.json')
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('Network response was not ok ' + response.statusText);
+                }
+                return response.json();
+            })
+            .then(data => {
+                easyQuestions = data;
             })
             .catch(error => {
                 console.error(error);
@@ -94,7 +112,7 @@ export function game() {
 
     const updateScoreTracker = () => {
         const tracker = document.getElementById('score_tracker');
-        if(!tracker) return;
+        if (!tracker) return;
         tracker.innerText = `Točnih: ${score}`;
     }
 
@@ -110,28 +128,45 @@ export function game() {
     }
 
     const addRandomQuestion = () => {
-        // Remove previous question so that we can add new one
+        let questions;
+
+        // Remove previous question so that we can add a new one
         const element = document.getElementById('question-container');
         if (element) {
             element.remove();
         }
 
-        const questionContainer = document.createElement('div');
-        const randomIndex = Math.floor(Math.random() * allQuestions.length);
-        const randomQuestion = allQuestions[randomIndex];
-
-        // If question was used, repeat adding question
-        if (usedQuestions.includes(randomIndex)) {
-            addRandomQuestion();
-            return;
+        if (mode === 'easy') {
+            questions = easyQuestions;
+        } else {
+            questions = hardQuestions;
         }
 
-        // Add to usedQuestions so that we do not repeat questions
+        const questionContainer = document.createElement('div');
+        let randomIndex;
+        let randomQuestion;
+
+        // If we used all questions, start over, otherwise use do-while to find index that has not been used
+        if (usedQuestions.length === questions.length) {
+            usedQuestions = [];
+            randomIndex = Math.floor(Math.random() * questions.length);
+        } else {
+            // Keep generating a random index until we find one that hasn't been used
+            do {
+                randomIndex = Math.floor(Math.random() * questions.length);
+            } while (usedQuestions.includes(randomIndex));
+        }
+
+        // Now we know the randomIndex is not in usedQuestions
+        randomQuestion = questions[randomIndex];
+
+        // Add the random question to usedQuestions so we don't reuse it
         usedQuestions.push(randomIndex);
 
         // Append the question element
         questionContainer.id = 'question-container';
-        questionContainer.innerHTML = _question;
+        questionContainer.innerHTML = _question; // Assuming _question is your template
+
         document.body.appendChild(questionContainer);
 
         // Add question elements
@@ -139,6 +174,7 @@ export function game() {
         document.getElementById('correct').onclick = markQuestionAsCorrect;
         document.getElementById('incorrect').onclick = markQuestionAsWrong;
         document.getElementById('pause').onclick = togglePause;
+
         const choices = document.getElementById('question_choices');
 
         // Add answers
@@ -150,11 +186,12 @@ export function game() {
             }
             choice.innerText = q;
             choices.appendChild(choice);
-        })
-
+        });
     }
 
+
     const showMenu = () => {
+        mode = 'easy';
         document.body.replaceChildren();
         const menu = document.createElement('div');
         menu.classList.add('menu')
@@ -162,10 +199,18 @@ export function game() {
         document.body.appendChild(menu);
         document.getElementById('1min').onclick = () => start(1)
         document.getElementById('2min').onclick = () => start(2)
+        document.getElementById('difficulty_toggle').onchange = (e) => {
+            if (e.target.checked) {
+                mode = 'hard';
+            } else {
+                mode = 'easy';
+            }
+        }
     }
 
     const init = async () => {
-        await loadAllQuestions();
+        await loadEasierQuestions();
+        await loadHarderQuestions();
         showMenu();
     }
 

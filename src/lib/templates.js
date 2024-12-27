@@ -13,4 +13,12 @@ export const _question = `
 export const _menu = `
     <button class="menu_btn" id="1min">60 sec</button>
     <button class="menu_btn" id="2min">120 sec</button>
+    <div class="toggle">
+    <span>Lakša pitanja</span>
+    <label class="switch">
+        <input type="checkbox" id="difficulty_toggle">
+        <span class="slider round"></span>
+    </label>
+    <span>Teža pitanja</span>
+    </div>
 `

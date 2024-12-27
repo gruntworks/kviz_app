@@ -1,0 +1,312 @@
+[
+  {
+    "idPitanja": 1,
+    "pitanje": "Kako se zove najmanji ocean na svijetu?",
+    "odgovori": [
+      "Arktički",
+      "Atlantski",
+      "Indijski"
+    ],
+    "tocan": 0
+  },
+  {
+    "idPitanja": 2,
+    "pitanje": "Koji je simbol za vodu?",
+    "odgovori": [
+      "H2O",
+      "CO2",
+      "O2"
+    ],
+    "tocan": 0
+  },
+  {
+    "idPitanja": 3,
+    "pitanje": "Koliko nogu ima pauk?",
+    "odgovori": [
+      "6",
+      "8",
+      "10"
+    ],
+    "tocan": 1
+  },
+  {
+    "idPitanja": 4,
+    "pitanje": "Koliko boja ima duga?",
+    "odgovori": [
+      "5",
+      "7",
+      "9"
+    ],
+    "tocan": 1
+  },
+  {
+    "idPitanja": 5,
+    "pitanje": "Koja životinja nosi kuću na leđima?",
+    "odgovori": [
+      "Kornjača",
+      "Puževi",
+      "Rakovi"
+    ],
+    "tocan": 1
+  },
+  {
+    "idPitanja": 6,
+    "pitanje": "Koje je najpoznatije jelo od riže u Italiji?",
+    "odgovori": [
+      "Risotto",
+      "Pizza",
+      "Lasagne"
+    ],
+    "tocan": 0
+  },
+  {
+    "idPitanja": 7,
+    "pitanje": "Koliko je sati u jednom danu?",
+    "odgovori": [
+      "12",
+      "24",
+      "48"
+    ],
+    "tocan": 1
+  },
+  {
+    "idPitanja": 8,
+    "pitanje": "Koji sport se igra s reketom i lopticom?",
+    "odgovori": [
+      "Nogomet",
+      "Tenis",
+      "Košarka"
+    ],
+    "tocan": 1
+  },
+  {
+    "idPitanja": 9,
+    "pitanje": "Koja boja nastaje miješanjem plave i žute?",
+    "odgovori": [
+      "Zelena",
+      "Narančasta",
+      "Ljubičasta"
+    ],
+    "tocan": 0
+  },
+  {
+    "idPitanja": 10,
+    "pitanje": "Koji broj dolazi nakon 999?",
+    "odgovori": [
+      "1000",
+      "1001",
+      "9999"
+    ],
+    "tocan": 0
+  },
+  {
+    "idPitanja": 11,
+    "pitanje": "Koliko planeta ima Sunčev sustav?",
+    "odgovori": [
+      "7",
+      "8",
+      "9"
+    ],
+    "tocan": 1
+  },
+  {
+    "idPitanja": 12,
+    "pitanje": "Koji je glavni grad Italije?",
+    "odgovori": [
+      "Milano",
+      "Rim",
+      "Venecija"
+    ],
+    "tocan": 1
+  },
+  {
+    "idPitanja": 13,
+    "pitanje": "Koji je glavni grad Hrvatske?",
+    "odgovori": [
+      "Zagreb",
+      "Split",
+      "Rijeka"
+    ],
+    "tocan": 0
+  },
+  {
+    "idPitanja": 14,
+    "pitanje": "Koji je glavni grad Francuske?",
+    "odgovori": [
+      "Pariz",
+      "Marseille",
+      "Lyon"
+    ],
+    "tocan": 0
+  },
+  {
+    "idPitanja": 15,
+    "pitanje": "Koja je najpoznatija pustinja na svijetu?",
+    "odgovori": [
+      "Sahara",
+      "Gobi",
+      "Kalahari"
+    ],
+    "tocan": 0
+  },
+  {
+    "idPitanja": 16,
+    "pitanje": "Koji je osnovni izvor svjetlosti na Zemlji?",
+    "odgovori": [
+      "Mjesec",
+      "Zvijezde",
+      "Sunce"
+    ],
+    "tocan": 2
+  },
+  {
+    "idPitanja": 17,
+    "pitanje": "Koja je najviša planina na svijetu?",
+    "odgovori": [
+      "Kilimanjaro",
+      "Everest",
+      "K2"
+    ],
+    "tocan": 1
+  },
+  {
+    "idPitanja": 18,
+    "pitanje": "Koji je najveći kontinent na svijetu?",
+    "odgovori": [
+      "Afrika",
+      "Azija",
+      "Europa"
+    ],
+    "tocan": 1
+  },
+  {
+    "idPitanja": 19,
+    "pitanje": "Koje je najveće more na svijetu?",
+    "odgovori": [
+      "Sredozemno",
+      "Karibsko",
+      "Koraljno"
+    ],
+    "tocan": 2
+  },
+  {
+    "idPitanja": 20,
+    "pitanje": "Koliko kontinenata postoji na svijetu?",
+    "odgovori": [
+      "5",
+      "6",
+      "7"
+    ],
+    "tocan": 2
+  },
+  {
+    "idPitanja": 21,
+    "pitanje": "Koja je najmanja američka savezna država?",
+    "odgovori": [
+      "Rhode Island",
+      "New Jersey",
+      "Delaware"
+    ],
+    "tocan": 0
+  },
+  {
+    "idPitanja": 22,
+    "pitanje": "Koja je valuta u Europskoj uniji?",
+    "odgovori": [
+      "Euro",
+      "Dolar",
+      "Funta"
+    ],
+    "tocan": 0
+  },
+  {
+    "idPitanja": 23,
+    "pitanje": "Koji ocean je najveći?",
+    "odgovori": [
+      "Atlantski",
+      "Pacifički",
+      "Indijski"
+    ],
+    "tocan": 1
+  },
+  {
+    "idPitanja": 24,
+    "pitanje": "Koji planet u Sunčevom sustavu je najbliži Suncu?",
+    "odgovori": [
+      "Venera",
+      "Merkur",
+      "Mars"
+    ],
+    "tocan": 1
+  },
+  {
+    "idPitanja": 25,
+    "pitanje": "Kako se zove glavni grad Njemačke?",
+    "odgovori": [
+      "Berlin",
+      "Hamburg",
+      "Minhen"
+    ],
+    "tocan": 0
+  },
+  {
+    "idPitanja": 26,
+    "pitanje": "Koji se kontinent nalazi južno od Europe?",
+    "odgovori": [
+      "Afrika",
+      "Azija",
+      "Australija"
+    ],
+    "tocan": 0
+  },
+  {
+    "idPitanja": 27,
+    "pitanje": "Kako se zove najmnogoljudnija zemlja na svijetu?",
+    "odgovori": [
+      "Indija",
+      "Kina",
+      "SAD"
+    ],
+    "tocan": 1
+  },
+  {
+    "idPitanja": 28,
+    "pitanje": "Koliko dana ima veljača u prijestupnoj godini?",
+    "odgovori": [
+      "28",
+      "29",
+      "30"
+    ],
+    "tocan": 1
+  },
+  {
+    "idPitanja": 29,
+    "pitanje": "Koliko je minuta u jednom satu?",
+    "odgovori": [
+      "60",
+      "100",
+      "120"
+    ],
+    "tocan": 0
+  },
+  {
+    "idPitanja": 30,
+    "pitanje": "Koja je najduža rijeka na svijetu?",
+    "odgovori": [
+      "Nil",
+      "Amazon",
+      "Misisipi"
+    ],
+    "tocan": 1
+  },
+  {
+    "idPitanja": 31,
+    "pitanje": "Koja ptica ne može letjeti?",
+    "odgovori": [
+      "Pingvin",
+      "Orao",
+      "Galeb"
+    ],
+    "tocan": 0
+  }
+]
